@@ -1,9 +1,7 @@
 const sumAll = function(numOne,numTwo) {
     if (numOne < 0 || numTwo < 0){
         return "ERROR";
-    }else if(typeof(numOne) !== 'number' || typeof(numTwo) != 'number'){
-        return "ERROR";
-    }else if(Math.floor(numOne) != numOne || Math.floor(numTwo) != numTwo){
+    }else if(!Number.isInteger(numOne) || !Number.isInteger(numTwo)){
         return "ERROR";
     }else{
         const n = (Math.max(numTwo,numOne) + 1) - Math.min(numOne,numTwo);
